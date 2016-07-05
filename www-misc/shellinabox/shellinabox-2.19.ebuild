@@ -7,7 +7,7 @@ EAPI=5
 AUTOTOOLS_AUTORECONF="yes"
 AUTOTOOLS_IN_SOURCE_BUILD="yes"
 
-inherit user autotools-utils
+inherit user autotools-utils systemd
 
 DESCRIPTION="Web server that can export arbitrary command line tools to a web based terminal emulator"
 HOMEPAGE="https://github.com/shellinabox/shellinabox"
@@ -65,6 +65,9 @@ src_install() {
 	# Install init+conf files.
 	newinitd "${FILESDIR}/${SIAB_DAEMON}.init" "${SIAB_DAEMON}"
 	newconfd "${FILESDIR}/${SIAB_DAEMON}.conf" "${SIAB_DAEMON}"
+
+	# Install systemd unit files
+	systemd_dounit "${FILESDIR}"/shellinaboxd.service
 
 	# Install CSS files.
 	insinto "/usr/share/${PN}-resources"
