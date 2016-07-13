@@ -24,7 +24,6 @@ RDEPEND="${PYTHON_DEPS}
 	>=dev-python/crcmod-1.7[${PYTHON_USEDEP}]
 	>=dev-python/httplib2-0.8[${PYTHON_USEDEP}]
 	>=dev-python/pyopenssl-0.13[${PYTHON_USEDEP}]
-	>=dev-python/gcs-oauth2-boto-plugin-1.12[${PYTHON_USEDEP}]
 	>=dev-python/google-apitools-0.5.2[${PYTHON_USEDEP}]
 	dev-python/oauth2client[${PYTHON_USEDEP}]
 	>=dev-python/python-gflags-2.0[${PYTHON_USEDEP}]
